@@ -1,0 +1,13 @@
+legendData.json:
+[
+{ "legendColor": colorVampire, "legendName": "Vampire", "KA": 0, "itemLen": 10, "evilKill": 0 }, 
+{ "legendColor": colorVampireMany, "legendName": "Vampire (m)", "KA": 0, "itemLen": 65, "evilKill": 0 }, 
+{ "legendColor": colorDemon, "legendName": "Demon", "KA": 0, "itemLen": 135, "evilKill": 0 }, 
+{ "legendColor": colorDemonMany, "legendName": "Demon (m)", "KA": 0, "itemLen": 185, "evilKill": 0 }, 
+{ "legendColor": colorHuman, "legendName": "Human", "KA": 0, "itemLen": 250, "evilKill": 0 }, 
+{ "legendColor": colorHumanMany, "legendName": "Human (m)", "KA": 0, "itemLen": 300, "evilKill": 0 }, 
+{ "legendColor": "#aaa", "legendName": "Assist", "KA": 1, "itemLen": 365, "evilKill": 0 }, 
+{ "legendColor": "#aaa", "legendName": "Assisted by Others", "KA": 2, "itemLen": 410, "evilKill": 0 },
+{ "legendColor": "#aaa", "legendName": "Evil Kill", "KA": 0, "itemLen": 505, "evilKill": 1 },
+{ "legendColor": colorAnimal, "legendName": "animal", "KA": 0, "itemLen": 555, "evilKill": 0 }
+]
