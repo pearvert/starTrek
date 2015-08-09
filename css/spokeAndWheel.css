@@ -5,7 +5,7 @@
 .roundel {
     position: absolute;
     left: 235px;
-    top: 307px;
+    top: 220px;
     display: none;
 }
 .roundel.is-shown {
@@ -20,12 +20,6 @@ h2 {
   color: maroon;
   margin: 0px;
 }
-.instruction {
-  font-family: helvetica, sans-serif;
-  font-size: .75em;
-  color: #999;
-  margin: 0px;
-}
 #instructionBox {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
@@ -33,16 +27,25 @@ h2 {
   background-color: #eee;
   width: 598px;
   }
+.instruction {
+  font-family: helvetica, sans-serif;
+  font-size: .75em;
+  color: #999;
+  margin: 0px;
+}
 .instruction span {
   font-weight: bold;
 }
-.tropeDetail {
+.dotDetail {
+  display: inline-block;
   background-color: #ddd;
   width: 710px;
+  height: 28px;
   padding: 2px;
   text-align: left;
   font: 12px sans-serif;
   pointer-events: none;
+  overflow: hidden;
 }
 .ring {
   stroke: none;
@@ -97,11 +100,11 @@ h2 {
   stroke-width: 0;
 }
 .source {
+  font-family: helvetica, sans-serif;
   font-size: .75em;
   color: #999;
 }
 .source span {
-  font-family: helvetica, sans-serif;
   font-weight: bold;
 }
 div.episodeTitle {
@@ -120,4 +123,9 @@ div#chart {
   position: relative;
   float: left;
   border: 0px;
+}
+#blackMatte {
+  background-color: black;
+  wwidth: 600px;
+  hheight: 625px;
 }

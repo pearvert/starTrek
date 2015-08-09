@@ -2,32 +2,43 @@
 <head>
 <script src="./bower_components/d3/d3.min.js"></script>
 <title>Star Trek Tropes</title>
-<link rel="stylesheet" type="text/css" href="css/starTrek.css">
+<link rel="stylesheet" type="text/css" href="css/spokeAndWheel.css">
 </head>
 
 <body>
 
-<!-- Wrapper to keep everything together -->
-<div id="wrapper">
 <h2>Star Trek Tropes</h2>
 <p class="subTitle">Misconceptions of many Star Trek Tropes</p>
 
-<p class="tropeDetail">...</p>
+<p class="dotDetail">...</p>
+
+<!-- Wrapper to keep everything together -->
+<div id="wrapper">
 
 <!-- Place for the wonderful Star Trek Spoke-and-Wheel chart -->
-<div id="chart"></div>
+<div id="chart">
 
-<!--
-<div id="characterroundels">
-<p value="kirkData" class="roundel"><img src="images/kirk.png"></p>
+<!-- black mask for background when help screen appears -->
+<!-- IN PROGRESS -->
+<div id="blackMatte" width="600px" height="625px"></div>
+	
 </div>
--->
+
+<div id="roundels">
+<p value="eyebrow" class="roundel"><img src="images/eyebrow.png"></p>
+<p value="menActWomenAre" class="roundel"><img src="images/menActWomenAre.png"></p>
+<p value="love" class="roundel"><img src="images/love.png"></p>
+<p value="tech" class="roundel"><img src="images/tech.png"></p>
+</div>
+
 
 <div id="buttons_1" width="600px">
-<button value="help" class="buttons">Help</button><br />
-<button value="eyebrow" class="buttons">Eyebrow</button><br />
+<!--<button value="help" class="buttons">Help</button><br /> -->
+<button value="eyebrow" class="buttons pressed">Eyebrow</button><br />
 <button value="menActWomenAre" class="buttons">Men Act, Women Are</button><br />
 <button value="sexism" class="buttons">Sexism</button><br />
+<button value="love" class="buttons">Love</button><br />
+<button value="tech" class="buttons">Tech</button><br />
 </div>
 
 <div style="clear: both;"></div>
@@ -44,7 +55,9 @@
 <p class="source">email me at: <span>dave.columbusdotgmail.com</span></p>
 </div>
 
+
 </div>
+
 
 <script src="js/spokeAndWheel.js"></script>
 
