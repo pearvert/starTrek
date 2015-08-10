@@ -22,7 +22,8 @@ var sheets = [
   "sexism",
   "tech",
   "telephone",
-  "tricorder"
+  "tricorder",
+  "spokePos"
 ];
 
 // Prepare the XLSX -> JSON transformer and register routes in express to the JSON api
