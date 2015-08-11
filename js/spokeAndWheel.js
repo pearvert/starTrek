@@ -97,12 +97,12 @@ var spokeLabels = spokeAndWheelChart.append("g")
 
 // The .data(spokePos) needs replaced with a json reader so
 // the data set can be removed from this file.
-var labels = spokeAndWheelChart.selectAll("text.spokeLabel")
+var labels = spokeLabels.selectAll("text.spokeLabel")
   .data(spokePos)
   .enter()
   .append("text")
-  .text(function (d) { return d.s + "-" + d.e; })
   .attr('class', 'spokeLabel')
+  .text(function (d) { return d.s + "-" + d.e; })
   // This locates the 90˚ and the -90˚ spots on the ring
   // then sets text anchor accordingly
   .style('text-anchor', function (d, i) {
@@ -204,7 +204,7 @@ var dotLegendDots = dotLegend.selectAll("circle.legendDot")
   .attr("cy", 10 )
   .attr("r", 5 )
   .attr("fill", function (d, i) {return d.legendColor; })
-//  .style("stroke-width", first_ep)
+  .style("stroke-width", first_ep)
 ;
 
 // Create the smaller dots in the middle of the legend dots if necessary
@@ -262,14 +262,15 @@ function updateCircles(newData) {
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
-      .transition().delay(function (d, i) {return i * delayVarShort; })
+      .transition().delay(function (d, i) {
+        return i * delayVarShort; })
 //      .attr("cx", centerPoint)
 //      .attr("cy", centerPoint)
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
-//      .style("stroke-width", first_ep)
+      .style("stroke-width", first_ep)
       ;
 
     // update existing death dots
@@ -281,7 +282,7 @@ function updateCircles(newData) {
 //      .attr("cy", centerPoint)
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
-//      .style("stroke-width", first_ep)
+      .style("stroke-width", first_ep)
       ;
 
     // remove old, used death dots
@@ -360,6 +361,9 @@ function colorTheDots(d) {
 // Make stroke visible to indicate an special parameter.
 // Should be changed from d.first_ep to whatever the data set uses.
 function first_ep(d) {
+
+//  return d.first_ep == "1" ? .75 : 1;
+
   if (d.first_ep == "1") {return .75;}
     else {return 0;}
 }
