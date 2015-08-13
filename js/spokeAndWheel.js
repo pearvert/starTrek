@@ -129,11 +129,8 @@ var labels = spokeLabels.selectAll("text.spokeLabel")
     }
   })
   .on("mouseover", function (d) {
-//    var episodeTitlelen = d.title.length;
     episodeTitle
       .attr("width", 200 + "px")
-//      .attr("width", function (d) {
-//      return (episodeTitlelen * 10) + "px"; })
     episodeTitle.transition()
       .duration(200)
       .style("opacity", .9)
@@ -147,10 +144,10 @@ var labels = spokeLabels.selectAll("text.spokeLabel")
     .style("opacity", 0)
   });
 
-// Draw the Dots in the spokes
+// Draw the dots in the spokes
 
-var dotsOfTrope = spokeAndWheelChart.append("g")
-  .attr("class", "dotsOfTrope")
+var allDotsOnTheRing = spokeAndWheelChart.append("g")
+  .attr("class", "allDotsOnTheRing")
   .attr("stroke", "black")
   .attr("stroke-width", 0)
   .attr("fill", "#666");
@@ -236,7 +233,7 @@ d3.selectAll(".buttons")
       d3.json(dataURL, function(error, json) {
         if (error) return console.warn(error);
         data = json;
-//      dotDetail.transition().duration(1000).style("opacity", 0)
+      dotDetail.transition().duration(1000).style("opacity", 0)
       d3.selectAll(".buttons").classed("pressed", false)
       d3Button.classed("pressed", true)
       var newData = d3Button.property("value");
@@ -252,20 +249,18 @@ d3.selectAll(".buttons")
 // This function wraps around the d3 pattern (bind, add, update, remove)
 function updateCircles(newData) {
 
-  // bind data for death dots
-  var makeSomeDots = dotsOfTrope.selectAll("circle.dotOfTrope")
+  // bind data for dots
+  var makeSomeDots = allDotsOnTheRing.selectAll("circle.oneDotOnTheRing")
     .data(newData)
 
-    // add new death dots
+    // add new dots
     makeSomeDots.enter().append("circle")
-      .attr("class", "dotOfTrope")
+      .attr("class", "oneDotOnTheRing")
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
       .transition().delay(function (d, i) {
         return i * delayVarShort; })
-//      .attr("cx", centerPoint)
-//      .attr("cy", centerPoint)
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return dotSize; })
@@ -273,23 +268,19 @@ function updateCircles(newData) {
       .style("stroke-width", ringAttr)
       ;
 
-    // update existing death dots
+    // update existing dots
     makeSomeDots
       .transition().delay(function (d, i) {return i * delayVarShort; })
       .attr("cy", calcSinForDots)
       .attr("cx", calcCosForDots)
-//      .attr("cx", centerPoint)
-//      .attr("cy", centerPoint)
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
       .style("stroke-width", ringAttr)
       ;
 
-    // remove old, used death dots
+    // remove old, used dots
     makeSomeDots.exit()
       .transition().delay(function (d, i) {return i * delayVarShort; })
-//      .attr("cx", centerPoint)
-//      .attr("cy", centerPoint)
      .attr("cx", calcCosForDotsOnRemove)
       .attr("cy", calcSinForDotsOnRemove)
       .attr("r", 0)
@@ -299,7 +290,7 @@ function updateCircles(newData) {
 
 // Section for creating mini dots inside larger colored dots.
 
-  var makeSomeDotsAssist = dotsOfTrope.selectAll("circle.assistDot")
+  var makeSomeDotsAssist = allDotsOnTheRing.selectAll("circle.assistDot")
     .data(newData)
 
     // add mini dots for assists
@@ -340,8 +331,8 @@ function updateCircles(newData) {
       .remove();
 */
 
-    // detailed information about an individual kill
-    var makeSomeDots = dotsOfTrope.selectAll("circle.dotOfTrope")
+    // detailed information about an individual dot
+    var makeSomeDots = allDotsOnTheRing.selectAll("circle.oneDotOnTheRing")
       .data(newData)
       .on("click", function(d) {
         dotDetail.style("opacity", 0).transition().duration(1000).style("opacity", .9)
