@@ -19,6 +19,7 @@ var sheets = [
   "kiss",
   "love",
   "menActWomenAre",
+  "racism",
   "rayGun",
   "sexism",
   "tech",

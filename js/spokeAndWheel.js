@@ -204,7 +204,7 @@ var dotLegendDots = dotLegend.selectAll("circle.legendDot")
   .attr("cy", 10 )
   .attr("r", 5 )
   .attr("fill", function (d, i) {return d.legendColor; })
-  .style("stroke-width", first_ep)
+  .style("stroke-width", ringAttr)
 ;
 
 // Create the smaller dots in the middle of the legend dots if necessary
@@ -270,7 +270,7 @@ function updateCircles(newData) {
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
-      .style("stroke-width", first_ep)
+      .style("stroke-width", ringAttr)
       ;
 
     // update existing death dots
@@ -282,7 +282,7 @@ function updateCircles(newData) {
 //      .attr("cy", centerPoint)
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
-      .style("stroke-width", first_ep)
+      .style("stroke-width", ringAttr)
       ;
 
     // remove old, used death dots
@@ -359,12 +359,12 @@ function colorTheDots(d) {
   };  
 
 // Make stroke visible to indicate an special parameter.
-// Should be changed from d.first_ep to whatever the data set uses.
-function first_ep(d) {
+// Should be changed from d.ringAttr to whatever the data set uses.
+function ringAttr(d) {
 
-//  return d.first_ep == "1" ? .75 : 1;
+//  return d.ringAttr == "1" ? .75 : 1;
 
-  if (d.first_ep == "1") {return .75;}
+  if (d.ringAttr == "1") {return .75;}
     else {return 0;}
 }
 
