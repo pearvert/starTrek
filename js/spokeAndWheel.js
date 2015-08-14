@@ -212,8 +212,8 @@ var dotLegendAssists = dotLegend.selectAll("circle.dotLegendAssists")
   .attr("class", "legendDot" )
   .attr("cx", function (d, i) {return d.itemLen; } )
   .attr("cy", 10 )
-  .attr("r", function (d) {return d.KA == 0 ? 0 : 2} )
-  .attr("fill", function (d) {return d.KA == 1 ? "white" : "black" });
+  .attr("r", function (d) {return d.dotAttr == 0 ? 0 : 2} )
+  .attr("fill", function (d) {return d.dotAttr == 1 ? "white" : "black" });
 
 // Create the text for each legend dot
 var legendTexts = dotLegend.selectAll("text.legendText")
@@ -286,26 +286,23 @@ function updateCircles(newData) {
       .attr("r", 0)
       .remove();
 
-/*
 
 // Section for creating mini dots inside larger colored dots.
 
-  var makeSomeDotsAssist = allDotsOnTheRing.selectAll("circle.assistDot")
+  var makeSomeDotsAssist = allDotsOnTheRing.selectAll("circle.smallCenterDot")
     .data(newData)
 
-    // add mini dots for assists
+    // add mini center dot for additional attribute
     makeSomeDotsAssist.enter().append("circle")
-      .attr("class", "assistDot")
+      .attr("class", "smallCenterDot")
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
       .transition().delay(function (d, i) {return i * delayVarShort; })
-//      .attr("cx", centerPoint)
-//     .attr("cy", centerPoint)
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
-      .attr("r", function (d) { return d.KA == 0 ? 0 : 1; })
-      .style("fill", function (d) { return d.KA == 1 ? "white" : "black";});
+      .attr("r", function (d) { return d.dotAttr == 0 ? 0 : ((dotSize / 8) * 3); })
+      .style("fill", function (d) { return d.dotAttr == 2 ? "black" : "white";});
 
     // update existing mini dots for assist
     makeSomeDotsAssist
@@ -314,8 +311,8 @@ function updateCircles(newData) {
 //      .attr("cy", centerPoint)/
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
-      .attr("r", function (d) { return d.KA == 0 ? 0 : 1; })
-      .style("fill", function (d) { return d.KA == 1 ? "white" : "black";})
+      .attr("r", function (d) { return d.dotAttr == 0 ? 0 : ((dotSize / 8) * 3); })
+      .style("fill", function (d) { return d.dotAttr == 2 ? "black" : "white";});
     ;
 
     // remove old mini dots for assist
@@ -323,12 +320,13 @@ function updateCircles(newData) {
       .exit()
       .transition().delay(function (d, i) {return i * delayVarShort; })
       .delay(function (d, i) {return i * 3; })
-      .attr("cx", centerPoint)
-      .attr("cy", centerPoint)
-//      .attr("cx", calcCosForDotsOnRemove)
-//      .attr("cy", calcSinForDotsOnRemove)
+//      .attr("cx", centerPoint)
+//      .attr("cy", centerPoint)
+      .attr("cx", calcCosForDotsOnRemove)
+      .attr("cy", calcSinForDotsOnRemove)
       .attr("r", 0)
       .remove();
+/*
 */
 
     // detailed information about an individual dot
