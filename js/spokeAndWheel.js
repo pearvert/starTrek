@@ -213,7 +213,7 @@ var dotLegendAssists = dotLegend.selectAll("circle.dotLegendAssists")
   .attr("cx", function (d, i) {return d.itemLen; } )
   .attr("cy", 10 )
   .attr("r", function (d) {return d.dotAttr == 0 ? 0 : 2} )
-  .attr("fill", function (d) {return d.dotAttr == 1 ? "white" : "black" });
+  .attr("fill", function (d) {return d.dotAttr == 1 ? "black" : "white" });
 
 // Create the text for each legend dot
 var legendTexts = dotLegend.selectAll("text.legendText")
@@ -229,9 +229,9 @@ var legendTexts = dotLegend.selectAll("text.legendText")
 d3.selectAll(".buttons")
     .on("click", function() {
       var d3Button = d3.select(this)
-      var dataURL = "/data/" + d3Button.property("value") + ".json"
+      var dataURL = "./data/" + d3Button.property("value") + ".json"
       d3.json(dataURL, function(error, json) {
-        if (error) return console.warn(error);
+//        if (error) return console.warn(error);
         data = json;
       dotDetail.transition().duration(1000).style("opacity", 0)
       d3.selectAll(".buttons").classed("pressed", false)
