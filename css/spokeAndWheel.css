@@ -40,7 +40,7 @@ h2 {
   display: inline-block;
   background-color: #ddd;
   width: 710px;
-  height: 28px;
+  height: 54px;
   padding: 2px;
   text-align: left;
   font: 12px sans-serif;
@@ -68,7 +68,8 @@ h2 {
   outline: none;
   margin-left: 10px;
   margin-bottom: 4px;
-  width: 100px;
+  width: 70px;
+  font-size: 8px;
 }
 .buttons:focus {
   background: #aaa;  
@@ -76,7 +77,8 @@ h2 {
   outline: none;
   margin-left: 10px;
   margin-bottom: 4px;
-  width: 100px;
+  width: 70px;
+  font-size: 8px;
 }
 .buttons:hover {
   background: #ccc;

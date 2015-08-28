@@ -29,6 +29,7 @@ var spokePos = [{"":"","counter":"1","ep_num":"100","ep_title":"The Cage","s":"1
 
 var endCapRadius = 130;
 var endCap = "N";
+var titleText = ["Giles"];
 
 
 // Draw the Background and the Ring
@@ -127,7 +128,6 @@ var labels = spokeLabels.selectAll("text.spokeLabel")
           "rotate(" + (i * 360 / (numberOfSpokes - 1.8)) + ")"
     }
   })
-
   .on("mouseover", function (d) {
     episodeTitle
       .attr("width", 200 + "px")
@@ -143,7 +143,6 @@ var labels = spokeLabels.selectAll("text.spokeLabel")
     .duration(500)
     .style("opacity", 0)
   });
-
 
 // Draw the dots in the spokes
 
@@ -251,19 +250,12 @@ d3.selectAll(".buttons")
 function updateCircles(newData) {
 
   // bind data for dots
-  var makeSomeDots = allDotsOnTheRing.selectAll("circle.coloredDot")
+  var makeSomeDots = allDotsOnTheRing.selectAll("circle.oneDotOnTheRing")
     .data(newData)
 
     // add new dots
-    makeSomeDots
-      .enter()
-//      .append("g")
-//      .attr("class", "oneDotOnTheRing")
-      .append("circle")
-      .attr("class", function (d, i) { return "dotGroup-" + i + " coloredDot" }) 
-      .attr("dataColor", function (d, i) { return dataOrDefault(d,"color") })
-      .attr("dataRing", function (d, i) { return dataOrDefault(d,"ringAttr") }) 
-      .attr("dataDot", function (d, i) { return dataOrDefault(d,"dotAttr") }) 
+    makeSomeDots.enter().append("circle")
+      .attr("class", "oneDotOnTheRing")
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
@@ -297,19 +289,12 @@ function updateCircles(newData) {
 
 // Section for creating mini dots inside larger colored dots.
 
-  var makeSomeDotsAssist = allDotsOnTheRing.selectAll("circle.smallDot")
+  var makeSomeDotsAssist = allDotsOnTheRing.selectAll("circle.smallCenterDot")
     .data(newData)
 
     // add mini center dot for additional attribute
-    makeSomeDotsAssist
-      .enter()
-//      .append("g")
-      .append("circle")
- //     .attr("class", "smallCenterDot")
-      .attr("class", function (d, i) { return "dotGroup-" + i + " smallDot" }) 
-      .attr("dataColor", function (d, i) { return dataOrDefault(d,"color","gray") })
-      .attr("dataRing", function (d, i) { return dataOrDefault(d,"ringAttr") }) 
-      .attr("dataDot", function (d, i) { return dataOrDefault(d,"dotAttr") }) 
+    makeSomeDotsAssist.enter().append("circle")
+      .attr("class", "smallCenterDot")
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
@@ -342,77 +327,30 @@ function updateCircles(newData) {
       .attr("r", 0)
       .remove();
 
-
-// make all but correct dots translucent
-
     makeSomeDots
-      .on("mouseover", function (d, i) {
-        var current_color = d.color;
-
-        d3.selectAll(".coloredDot")
-          .attr("opacity", function (d, i) {
-            if (d.color === current_color) { return 1}
-              else { return .2}
-          })
-        d3.selectAll(".smallDot")
-          .attr("opacity", function (d, i) {
-            if (d.color === current_color) { return 1}
-              else { return .2}
-          })
-        }) ;
-
-    makeSomeDots
+      .on("mouseover", function (d) {
+        var current_color = d3.select(this.color)
+        d3.selectAll("circle.oneDotOnTheRing").style("opacity", function (d) {
+          if(d.color == current_color) {return "1"}
+            else {return ".2"}
+        })
+        })
       .on("mouseout", function (d) {
-        d3.selectAll(".coloredDot")
-          .attr("opacity", 1)
-        d3.selectAll(".smallDot")
-          .attr("opacity", 1)
+        d3.selectAll("circle.oneDotOnTheRing").style("opacity", "1")
       });
-        
 
     // detailed information about an individual dot
-    var makeSomeDots = allDotsOnTheRing.selectAll("circle.coloredDot")
+    var makeSomeDots = allDotsOnTheRing.selectAll("circle.oneDotOnTheRing")
       .data(newData)
       .on("click", function(d) {
         dotDetail.style("opacity", 0).transition().duration(1000).style("opacity", .9)
         dotDetail.html("S"+d.s+"E"+d.e+" ("+d.ep_title+") [" + d.trope + "] " + d.trope_detail)
     })
 
-    var makeSomeDots = allDotsOnTheRing.selectAll("circle.smallDot")
-      .data(newData)
-      .on("click", function(d) {
-        dotDetail.style("opacity", 0).transition().duration(1000).style("opacity", .9)
-        dotDetail.html("S"+d.s+"E"+d.e+" ("+d.ep_title+") [" + d.trope + "] " + d.trope_detail)
-    })
-};
-
-// Independent Funtions
-
-function turnDotsTranslucent (current_color, whichCircle) {
-//    console.log(current_color, whichCircle)
-    d3.selectAll(whichCircle).style("opacity", function (d) {
-        if(d.color === current_color) {return "1"}
-        else {return ".1"}
-})};
-
-// take nulls and return "something"
-function dataOrDefault (data, property, varDefault) {
-  varDefault = typeof varDefault === "undefined" ? 0 : varDefault;
-  var currentPropertyValue = data[property];
-  var aValue;
-
-  if (typeof currentPropertyValue === "undefined" || currentPropertyValue === "") {
-    aValue = varDefault;
-  } else {
-    aValue = currentPropertyValue;
-  }
-  return aValue
 };
 
 // tell graph what color each dot needs to be
 function colorTheDots(d) {
-  var defaultColor = "#aaa"
-
   if( d.color == "") {
     return "#aaa";
   } else {
@@ -422,6 +360,8 @@ function colorTheDots(d) {
 // Make stroke visible to indicate an special parameter.
 // Should be changed from d.ringAttr to whatever the data set uses.
 function ringAttr(d) {
+
+//  return d.ringAttr == "1" ? .75 : 1;
 
   if (d.ringAttr == "1") {return .75;}
     else {return 0;}
