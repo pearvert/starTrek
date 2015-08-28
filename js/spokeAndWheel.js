@@ -272,7 +272,13 @@ function updateCircles(newData) {
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
-      .style("stroke-width", ringAttr)
+      .style("stroke", function (d) {
+        if (ringAttr === "1") { return "black"}
+          else { return "white"}})
+      .style("stroke-width", function (d) {
+        if (ringAttr === "0") { return 0 }
+          else { return 1}
+      })
       ;
 
     // update existing dots
@@ -316,7 +322,7 @@ function updateCircles(newData) {
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return d.dotAttr == 0 ? 0 : ((dotSize / 8) * 3); })
-      .style("fill", function (d) { return d.dotAttr == 2 ? "black" : "white";});
+      .style("fill", function (d) { return d.dotAttr == 2 ? "white" : "black";});
 
     // update existing mini dots for assist
     makeSomeDotsAssist
@@ -326,7 +332,7 @@ function updateCircles(newData) {
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return d.dotAttr == 0 ? 0 : ((dotSize / 8) * 3); })
-      .style("fill", function (d) { return d.dotAttr == 2 ? "black" : "white";});
+      .style("fill", function (d) { return d.dotAttr == 2 ? "white" : "black";});
     ;
 
     // remove old mini dots for assist
