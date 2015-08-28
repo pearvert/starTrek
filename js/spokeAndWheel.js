@@ -348,11 +348,23 @@ function updateCircles(newData) {
     makeSomeDots
       .on("mouseover", function (d, i) {
         var current_color = d.color;
+        var current_ringAttr = d.ringAttr;
+        var current_dotAttr = d.dotAttr;
 
         d3.selectAll(".coloredDot")
           .attr("opacity", function (d, i) {
-            if (d.color === current_color) { return 1}
-              else { return .2}
+            if (d.color === current_color) { 
+              if (d.ringAttr === current_ringAttr) {
+                if (d.dotAttr === current_dotAttr) {
+                  return 1
+                } else {
+                  return .2
+                }
+              } else {
+                return .2
+              }
+            } else { 
+              return .2}
           })
         d3.selectAll(".smallDot")
           .attr("opacity", function (d, i) {
