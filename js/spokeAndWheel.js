@@ -70,7 +70,6 @@ var theRing = ringSections.selectAll("circle.ring")
 // Create new group for the spokes
 var episodeSpokes = spokeAndWheelChart.append("g")
   .attr("class", "episodeSpokes")
-  .attr("stroke", "#666")
   .attr("stroke-width", .25)
   .attr("fill", "#ddd");
 
@@ -358,18 +357,28 @@ function updateCircles(newData) {
                 if (d.dotAttr === current_dotAttr) {
                   return 1
                 } else {
-                  return .2
+                  return .1
                 }
               } else {
-                return .2
+                return .1
               }
             } else { 
-              return .2}
+              return .1}
           })
         d3.selectAll(".smallDot")
           .attr("opacity", function (d, i) {
-            if (d.color === current_color) { return 1}
-              else { return .2}
+            if (d.color === current_color) { 
+              if (d.ringAttr === current_ringAttr) {
+                if (d.dotAttr === current_dotAttr) {
+                  return 1
+                } else {
+                  return .1
+                }
+              } else {
+                return .1
+              }
+            } else { 
+              return .1}
           })
         }) ;
 
