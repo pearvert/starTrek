@@ -279,8 +279,8 @@ function updateCircles(newData) {
 
   // bind data for dots
   var makeSomeDots = allDotsOnTheRing.selectAll("circle.coloredDot")
-//    .data(newData)
-    .data(testData)
+    .data(newData)
+//    .data(testData)
 
     // add new dots
     makeSomeDots
@@ -297,22 +297,29 @@ function updateCircles(newData) {
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
       .style("stroke", function (d) {
-        if (ringAttr === "1") { return "black"}
+        if (d.ringAttr === "1") { return "black"}
           else { return "white"}})
       .style("stroke-width", function (d) {
-        if (ringAttr === "0") { return 0 }
-          else { return 1}
+        if (d.ringAttr === "0") { return 0 }
+          else { return .75}
       })
       ;
 
     // update existing dots
     makeSomeDots
       .transition().delay(function (d, i) {return i * delayVarShort; })
+      .attr("class", function (d, i) { return d.color + " dotGroup-" + i + " coloredDot" }) 
       .attr("cy", calcSinForDots)
       .attr("cx", calcCosForDots)
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
-      .style("stroke-width", ringAttr)
+      .style("stroke", function (d) {
+        if (d.ringAttr === "1") { return "black"}
+          else { return "white"}})
+      .style("stroke-width", function (d) {
+        if (d.ringAttr === "0") { return 0 }
+          else { return .75}
+      })
       ;
 
     // remove old, used dots
@@ -349,6 +356,7 @@ function updateCircles(newData) {
       .transition().delay(function (d, i) {return i * delayVarShort; })
 //      .attr("cx", centerPoint)
 //      .attr("cy", centerPoint)/
+      .attr("class", function (d, i) { return d.color + " dotGroup-" + i + " smallDot"}) 
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return d.dotAttr == 0 ? 0 : ((dotSize / 8) * 3); })
@@ -459,11 +467,18 @@ function dataOrDefault (data, property, varDefault) {
 // tell graph what color each dot needs to be
 function colorTheDots(d) {
 
-  if(d.color === "kirk") {return "kirk"}
-    if(d.color === "spock") {return "spock"}
-    else {return "whitesmoke"}
-
-}
+  if(d.color === "kirk") {return "gold"}
+    else if(d.color === "checkov") {return "gold"}
+      else if(d.color === "sulu") {return "gold"}
+        else if(d.color === "desalle-g") {return "gold"}
+          else if(d.color === "spock") {return "turquoise"}
+            else if(d.color === "mccoy") {return "turquoise"}
+              else if(d.color === "nurse_chapel") {return "turquoise"}
+                else if (d.color === "uhura") {return "red"}
+                  else if(d.color === "scotty") {return "red"}
+                    else if(d.color === "desalle-r") {return "red"}
+                      else {return "whitesmoke"}
+      }
 
 /*
 function colorTheDots(d) {
