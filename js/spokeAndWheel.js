@@ -285,13 +285,8 @@ function updateCircles(newData) {
     // add new dots
     makeSomeDots
       .enter()
-//      .append("g")
-//      .attr("class", "oneDotOnTheRing")
       .append("circle")
-      .attr("class", function (d, i) { return "dotGroup-" + i + " coloredDot" }) 
-//      .attr("dataColor", function (d, i) { return dataOrDefault(d,"color") })
-//      .attr("dataRing", function (d, i) { return dataOrDefault(d,"ringAttr") }) 
-//      .attr("dataDot", function (d, i) { return dataOrDefault(d,"dotAttr") }) 
+      .attr("class", function (d, i) { return d.color + " dotGroup-" + i + " coloredDot" }) 
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
@@ -300,7 +295,7 @@ function updateCircles(newData) {
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return dotSize; })
-      .style("class", colorTheDots)
+      .style("fill", colorTheDots)
       .style("stroke", function (d) {
         if (ringAttr === "1") { return "black"}
           else { return "white"}})
@@ -338,13 +333,8 @@ function updateCircles(newData) {
     // add mini center dot for additional attribute
     makeSomeDotsAssist
       .enter()
-//      .append("g")
       .append("circle")
- //     .attr("class", "smallCenterDot")
-      .attr("class", function (d, i) { return "dotGroup-" + i + " smallDot" }) 
-//      .attr("dataColor", function (d, i) { return dataOrDefault(d,"color","gray") })
-//      .attr("dataRing", function (d, i) { return dataOrDefault(d,"ringAttr") }) 
-//      .attr("dataDot", function (d, i) { return dataOrDefault(d,"dotAttr") }) 
+      .attr("class", function (d, i) { return d.color + " dotGroup-" + i + " smallDot"}) 
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
@@ -469,8 +459,8 @@ function dataOrDefault (data, property, varDefault) {
 // tell graph what color each dot needs to be
 function colorTheDots(d) {
 
-  if(d.color === "kirk") {return "gold"}
-    if(d.color === "spock") {return "cornflowerblue"}
+  if(d.color === "kirk") {return "kirk"}
+    if(d.color === "spock") {return "spock"}
     else {return "whitesmoke"}
 
 }
