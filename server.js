@@ -11,20 +11,30 @@ app.get('/express', function (req, res) {
 
 // Case sensitive names of the sheets expected to be in the source xlsx file
 var sheets = [
+  "alert",
   "captainsLog",
   "commLink",
   "dataPadd",
   "eyebrow",
   "hug",
+  "hypospray",
   "kiss",
+  "landingParty",
   "love",
+  "mccoyCatch",
   "menActWomenAre",
+  "neckPinch",
+  "phlebotinum",
   "racism",
   "rayGun",
+  "redshirt",
+  "setPiece",
   "sexism",
-  "tech",
+  "stShuffle",
   "telephone",
+  "theMedic",
   "tricorder",
+  "warp",
   "spokePos"
 ];
 
@@ -32,7 +42,7 @@ var sheets = [
 xlsx_api(app, {
   sheets: sheets,                  // Array of sheet names (case sensitive)
   dataDir: __dirname+'/data',      // directory which holds the source xlsx file and where the data will be extracted from into .json files
-  xlsxSource: 'starTrekTropes.xlsx' // The name of the your xlsx source file within the data dir above
+  xlsxSource: 'starTrekTropes.xlsm' // The name of the your xlsx source file within the data dir above
 });
 
 var server = app.listen(3000, function () {

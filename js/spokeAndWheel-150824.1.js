@@ -1,4 +1,4 @@
-var chartDiv = d3.select("#chart");
+  var chartDiv = d3.select("#chart");
 
 //Data for Setup
 var w = 600;
@@ -29,6 +29,7 @@ var spokePos = [{"":"","counter":"1","ep_num":"100","ep_title":"The Cage","s":"1
 
 var endCapRadius = 130;
 var endCap = "N";
+var titleText = ["Giles"];
 
 
 // Draw the Background and the Ring
@@ -70,6 +71,7 @@ var theRing = ringSections.selectAll("circle.ring")
 // Create new group for the spokes
 var episodeSpokes = spokeAndWheelChart.append("g")
   .attr("class", "episodeSpokes")
+  .attr("stroke", "#666")
   .attr("stroke-width", .25)
   .attr("fill", "#ddd");
 
@@ -126,7 +128,6 @@ var labels = spokeLabels.selectAll("text.spokeLabel")
           "rotate(" + (i * 360 / (numberOfSpokes - 1.8)) + ")"
     }
   })
-
   .on("mouseover", function (d) {
     episodeTitle
       .attr("width", 200 + "px")
@@ -143,14 +144,11 @@ var labels = spokeLabels.selectAll("text.spokeLabel")
     .style("opacity", 0)
   });
 
-
 // Draw the dots in the spokes
 
+
 var allDotsOnTheRing = spokeAndWheelChart.append("g")
-  .attr("class", "allDotsOnTheRing")
-  .attr("stroke", "black")
-  .attr("stroke-width", 0)
-  .attr("fill", "#666");
+  .attr("class", "allDotsOnTheRing");
 
 // Draw EndCap in the center
 centerHubCircle = spokeAndWheelChart.append("g")
@@ -249,20 +247,24 @@ d3.selectAll(".buttons")
 // This function wraps around the d3 pattern (bind, add, update, remove)
 function updateCircles(newData) {
 
+// var allDotsOnTheRing = spokeAndWheelChart.append("g")
+//   .attr("class", "allDotsOnTheRing");
+
   // bind data for dots
-  var makeSomeDots = allDotsOnTheRing.selectAll("circle.coloredDot")
-    .data(newData)
+var makeSomeDots = allDotsOnTheRing
+    .selectAll(".oneDotOnTheRing")
+//    .data(newData)
+    ;
+
+    // create "g" to contain all the dots
 
     // add new dots
     makeSomeDots
-      .enter()
-//      .append("g")
-//      .attr("class", "oneDotOnTheRing")
-      .append("circle")
-      .attr("class", function (d, i) { return "dotGroup-" + i + " coloredDot" }) 
-      .attr("dataColor", function (d, i) { return dataOrDefault(d,"color") })
-      .attr("dataRing", function (d, i) { return dataOrDefault(d,"ringAttr") }) 
-      .attr("dataDot", function (d, i) { return dataOrDefault(d,"dotAttr") }) 
+      .append("g")
+      .attr("class", "oneGroupOnTheRing")
+      .data(newData)
+      .enter().append("circle")
+      .attr("class", "oneDotOnTheRing")
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
@@ -272,13 +274,8 @@ function updateCircles(newData) {
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
-      .style("stroke", function (d) {
-        if (ringAttr === "1") { return "black"}
-          else { return "white"}})
       .style("stroke-width", function (d) {
-        if (ringAttr === "0") { return 0 }
-          else { return 1}
-      })
+        return d.ringAttr; })
       ;
 
     // update existing dots
@@ -288,7 +285,8 @@ function updateCircles(newData) {
       .attr("cx", calcCosForDots)
       .attr("r", function (d) { return dotSize; })
       .style("fill", colorTheDots)
-      .style("stroke-width", ringAttr)
+      .style("stroke-width", function (d) {
+        return d.ringAttr; })
       ;
 
     // remove old, used dots
@@ -302,19 +300,12 @@ function updateCircles(newData) {
 
 // Section for creating mini dots inside larger colored dots.
 
-  var makeSomeDotsAssist = allDotsOnTheRing.selectAll("circle.smallDot")
+var makeSomeDotsAssist = allDotsOnTheRing.selectAll("circle.smallCenterDot")
     .data(newData)
 
     // add mini center dot for additional attribute
-    makeSomeDotsAssist
-      .enter()
-//      .append("g")
-      .append("circle")
- //     .attr("class", "smallCenterDot")
-      .attr("class", function (d, i) { return "dotGroup-" + i + " smallDot" }) 
-      .attr("dataColor", function (d, i) { return dataOrDefault(d,"color","gray") })
-      .attr("dataRing", function (d, i) { return dataOrDefault(d,"ringAttr") }) 
-      .attr("dataDot", function (d, i) { return dataOrDefault(d,"dotAttr") }) 
+    makeSomeDotsAssist.enter().append("circle")
+      .attr("class", "smallCenterDot")
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
@@ -322,7 +313,7 @@ function updateCircles(newData) {
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return d.dotAttr == 0 ? 0 : ((dotSize / 8) * 3); })
-      .style("fill", function (d) { return d.dotAttr == 2 ? "white" : "black";});
+      .style("fill", function (d) { return d.dotAttr == 2 ? "black" : "white";});
 
     // update existing mini dots for assist
     makeSomeDotsAssist
@@ -332,7 +323,7 @@ function updateCircles(newData) {
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return d.dotAttr == 0 ? 0 : ((dotSize / 8) * 3); })
-      .style("fill", function (d) { return d.dotAttr == 2 ? "white" : "black";});
+      .style("fill", function (d) { return d.dotAttr == 2 ? "black" : "white";});
     ;
 
     // remove old mini dots for assist
@@ -347,99 +338,30 @@ function updateCircles(newData) {
       .attr("r", 0)
       .remove();
 
-
-// make all but correct dots translucent
-
     makeSomeDots
-      .on("mouseover", function (d, i) {
-        var current_color = d.color;
-        var current_ringAttr = d.ringAttr;
-        var current_dotAttr = d.dotAttr;
-
-        d3.selectAll(".coloredDot")
-          .attr("opacity", function (d, i) {
-            if (d.color === current_color) { 
-              if (d.ringAttr === current_ringAttr) {
-                if (d.dotAttr === current_dotAttr) {
-                  return 1
-                } else {
-                  return .1
-                }
-              } else {
-                return .1
-              }
-            } else { 
-              return .1}
-          })
-        d3.selectAll(".smallDot")
-          .attr("opacity", function (d, i) {
-            if (d.color === current_color) { 
-              if (d.ringAttr === current_ringAttr) {
-                if (d.dotAttr === current_dotAttr) {
-                  return 1
-                } else {
-                  return .1
-                }
-              } else {
-                return .1
-              }
-            } else { 
-              return .1}
-          })
-        }) ;
-
-    makeSomeDots
+      .on("mouseover", function (d) {
+        var current_color = d3.select(this.color)
+        d3.selectAll("circle.oneDotOnTheRing").style("opacity", function (d) {
+          if(d.color == current_color) {return "1"}
+            else {return ".2"}
+        })
+        })
       .on("mouseout", function (d) {
-        d3.selectAll(".coloredDot")
-          .attr("opacity", 1)
-        d3.selectAll(".smallDot")
-          .attr("opacity", 1)
+        d3.selectAll("circle.oneDotOnTheRing").style("opacity", "1")
       });
-        
 
     // detailed information about an individual dot
-    var makeSomeDots = allDotsOnTheRing.selectAll("circle.coloredDot")
+    var makeSomeDots = allDotsOnTheRing.selectAll("circle.oneDotOnTheRing")
       .data(newData)
       .on("click", function(d) {
         dotDetail.style("opacity", 0).transition().duration(1000).style("opacity", .9)
         dotDetail.html("S"+d.s+"E"+d.e+" ("+d.ep_title+") [" + d.trope + "] " + d.trope_detail)
     })
 
-    var makeSomeDots = allDotsOnTheRing.selectAll("circle.smallDot")
-      .data(newData)
-      .on("click", function(d) {
-        dotDetail.style("opacity", 0).transition().duration(1000).style("opacity", .9)
-        dotDetail.html("S"+d.s+"E"+d.e+" ("+d.ep_title+") [" + d.trope + "] " + d.trope_detail)
-    })
-};
-
-// Independent Funtions
-
-function turnDotsTranslucent (current_color, whichCircle) {
-//    console.log(current_color, whichCircle)
-    d3.selectAll(whichCircle).style("opacity", function (d) {
-        if(d.color === current_color) {return "1"}
-        else {return ".1"}
-})};
-
-// take nulls and return "something"
-function dataOrDefault (data, property, varDefault) {
-  varDefault = typeof varDefault === "undefined" ? 0 : varDefault;
-  var currentPropertyValue = data[property];
-  var aValue;
-
-  if (typeof currentPropertyValue === "undefined" || currentPropertyValue === "") {
-    aValue = varDefault;
-  } else {
-    aValue = currentPropertyValue;
-  }
-  return aValue
 };
 
 // tell graph what color each dot needs to be
 function colorTheDots(d) {
-  var defaultColor = "#aaa"
-
   if( d.color == "") {
     return "#aaa";
   } else {
@@ -449,6 +371,8 @@ function colorTheDots(d) {
 // Make stroke visible to indicate an special parameter.
 // Should be changed from d.ringAttr to whatever the data set uses.
 function ringAttr(d) {
+
+//  return d.ringAttr == "1" ? .75 : 1;
 
   if (d.ringAttr == "1") {return .75;}
     else {return 0;}

@@ -5,7 +5,7 @@
 .roundel {
     position: absolute;
     left: 235px;
-    top: 220px;
+    top: 219px;
     display: none;
 }
 .roundel.is-shown {
@@ -36,11 +36,15 @@ h2 {
 .instruction span {
   font-weight: bold;
 }
+.episodeSpokes {
+  stroke: #fff;
+  stroke-width: .1)
+}
 .dotDetail {
   display: inline-block;
   background-color: #ddd;
   width: 710px;
-  height: 28px;
+  height: 54px;
   padding: 2px;
   text-align: left;
   font: 12px sans-serif;
@@ -50,7 +54,7 @@ h2 {
 .ring {
   stroke: none;
   stroke-width: 0;
-  fill: #eed;
+  fill: #776;
 }
 .death {
   fill: #000;
@@ -68,7 +72,8 @@ h2 {
   outline: none;
   margin-left: 10px;
   margin-bottom: 4px;
-  width: 100px;
+  width: 70px;
+  font-size: 8px;
 }
 .buttons:focus {
   background: #aaa;  
@@ -76,7 +81,8 @@ h2 {
   outline: none;
   margin-left: 10px;
   margin-bottom: 4px;
-  width: 100px;
+  width: 70px;
+  font-size: 8px;
 }
 .buttons:hover {
   background: #ccc;
