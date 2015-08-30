@@ -308,7 +308,8 @@ function updateCircles(newData) {
     makeSomeDots
       .enter()
       .append("circle")
-      .attr("class", function (d, i) { return d.color + " dotGroup-" + i + " coloredDot" }) 
+      .attr("class", function (d, i) { 
+        return d.color + " dotGroup-" + i + " coloredDot" }) 
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
@@ -318,7 +319,6 @@ function updateCircles(newData) {
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return dotSize; })
       .style("fill", function (d) {
-        console.log(colorScale(d.color))
         return colorScale(d.color)})
 //      .style("fill", colorTheDots(function (d) {return d.color }))
       .style("stroke", function (d) {
@@ -491,7 +491,7 @@ function dataOrDefault (data, property, varDefault) {
 };
 
 // tell graph what color each dot needs to be
-function colorTheDots (d) {
+function colorTheDotsDotsDots (d) {
   var current_char = d.color;
 
   var colorOfShirt = d3.scale.ordinal()
@@ -499,7 +499,7 @@ function colorTheDots (d) {
     return colorOfShirt;
 }
 
-function colorTheDots_withIfElse(d) {
+function colorTheDots(d) {
 
   if(d.color === "kirk") {return "gold"}
     else if(d.color === "checkov") {return "gold"}
