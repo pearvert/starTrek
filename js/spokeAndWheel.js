@@ -294,6 +294,8 @@ d3.selectAll(".buttons")
 });
 
 
+
+
 // This function wraps around the d3 pattern (bind, add, update, remove)
 function updateCircles(newData) {
 
@@ -315,7 +317,9 @@ function updateCircles(newData) {
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return dotSize; })
-      .style("fill", function (d) {return colorScale(d.color)})
+      .style("fill", function (d) {
+        console.log(colorScale(d.color))
+        return colorScale(d.color)})
 //      .style("fill", colorTheDots(function (d) {return d.color }))
       .style("stroke", function (d) {
         if (d.ringAttr === "1") { return "black"}
