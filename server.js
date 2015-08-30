@@ -30,7 +30,7 @@ var sheets = [
   "redshirt",
   "scotty",
   "stShuffle",
-  "tricoder",
+  "tricorder",
   "warp"
 ];
 

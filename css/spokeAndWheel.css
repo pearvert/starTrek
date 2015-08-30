@@ -72,8 +72,8 @@ h2 {
   outline: none;
   margin-left: 10px;
   margin-bottom: 4px;
-  width: 70px;
-  font-size: 8px;
+  width: 80px;
+  font-size: 10px;
 }
 .buttons:focus {
   background: #aaa;  
@@ -81,8 +81,8 @@ h2 {
   outline: none;
   margin-left: 10px;
   margin-bottom: 4px;
-  width: 70px;
-  font-size: 8px;
+  width: 80px;
+  font-size: 10px;
 }
 .buttons:hover {
   background: #ccc;
