@@ -25,6 +25,9 @@ var spokeWidth = .5;
 var spokePos = [{"":"","counter":"1","ep_num":"100","ep_title":"The Cage","s":"1","e":"0","spokePos":"1"},{"":"","counter":"2","ep_num":"101","ep_title":"The Man Trap","s":"1","e":"1","spokePos":"2"},{"":"","counter":"3","ep_num":"102","ep_title":"Charlie X","s":"1","e":"2","spokePos":"3"},{"":"","counter":"4","ep_num":"103","ep_title":"Where No Man Has Gone Before","s":"1","e":"3","spokePos":"4"},{"":"","counter":"5","ep_num":"104","ep_title":"The Naked Time","s":"1","e":"4","spokePos":"5"},{"":"","counter":"6","ep_num":"105","ep_title":"The Enemy Within","s":"1","e":"5","spokePos":"6"},{"":"","counter":"7","ep_num":"106","ep_title":"Mudd's Women","s":"1","e":"6","spokePos":"7"},{"":"","counter":"8","ep_num":"107","ep_title":"What Are Little Girls Made Of?","s":"1","e":"7","spokePos":"8"},{"":"","counter":"9","ep_num":"108","ep_title":"Miri","s":"1","e":"8","spokePos":"9"},{"":"","counter":"10","ep_num":"109","ep_title":"Dagger of the Mind","s":"1","e":"9","spokePos":"10"},{"":"","counter":"11","ep_num":"110","ep_title":"The Corbomite Maneuver","s":"1","e":"10","spokePos":"11"},{"":"","counter":"12","ep_num":"111","ep_title":"The Menagerie, Part I","s":"1","e":"11","spokePos":"12"},{"":"","counter":"13","ep_num":"112","ep_title":"The Menagerie, Part II","s":"1","e":"12","spokePos":"13"},{"":"","counter":"14","ep_num":"113","ep_title":"The Conscience of the King","s":"1","e":"13","spokePos":"14"},{"":"","counter":"15","ep_num":"114","ep_title":"Balance of Terror","s":"1","e":"14","spokePos":"15"},{"":"","counter":"16","ep_num":"115","ep_title":"Shore Leave","s":"1","e":"15","spokePos":"16"},{"":"","counter":"17","ep_num":"116","ep_title":"The Galileo Seven","s":"1","e":"16","spokePos":"17"},{"":"","counter":"18","ep_num":"117","ep_title":"The Squire of Gothos","s":"1","e":"17","spokePos":"18"},{"":"","counter":"19","ep_num":"118","ep_title":"Arena","s":"1","e":"18","spokePos":"19"},{"":"","counter":"20","ep_num":"119","ep_title":"Tomorrow Is Yesterday","s":"1","e":"19","spokePos":"20"},{"":"","counter":"21","ep_num":"120","ep_title":"Court Martial","s":"1","e":"20","spokePos":"21"},{"":"","counter":"22","ep_num":"121","ep_title":"The Return of the Archons","s":"1","e":"21","spokePos":"22"},{"":"","counter":"23","ep_num":"122","ep_title":"Space Seed","s":"1","e":"22","spokePos":"23"},{"":"","counter":"24","ep_num":"123","ep_title":"A Taste of Armageddon","s":"1","e":"23","spokePos":"24"},{"":"","counter":"25","ep_num":"124","ep_title":"This Side of Paradise","s":"1","e":"24","spokePos":"25"},{"":"","counter":"26","ep_num":"125","ep_title":"The Devil in the Dark","s":"1","e":"25","spokePos":"26"},{"":"","counter":"27","ep_num":"126","ep_title":"Errand of Mercy","s":"1","e":"26","spokePos":"27"},{"":"","counter":"28","ep_num":"127","ep_title":"The Alternative Factor","s":"1","e":"27","spokePos":"28"},{"":"","counter":"29","ep_num":"128","ep_title":"The City on the Edge of Forever","s":"1","e":"28","spokePos":"29"},{"":"","counter":"30","ep_num":"129","ep_title":"Operation: Annihilate!","s":"1","e":"29","spokePos":"30"},{"":"","counter":"31","ep_num":"201","ep_title":"Amok Time","s":"2","e":"1","spokePos":"31"},{"":"","counter":"32","ep_num":"202","ep_title":"Who Mourns for Adonais?","s":"2","e":"2","spokePos":"32"},{"":"","counter":"33","ep_num":"203","ep_title":"The Changeling","s":"2","e":"3","spokePos":"33"},{"":"","counter":"34","ep_num":"204","ep_title":"Mirror, Mirror","s":"2","e":"4","spokePos":"34"},{"":"","counter":"35","ep_num":"205","ep_title":"The Apple","s":"2","e":"5","spokePos":"35"},{"":"","counter":"36","ep_num":"206","ep_title":"The Doomsday Machine","s":"2","e":"6","spokePos":"36"},{"":"","counter":"37","ep_num":"207","ep_title":"Catspaw","s":"2","e":"7","spokePos":"37"},{"":"","counter":"38","ep_num":"208","ep_title":"I, Mudd","s":"2","e":"8","spokePos":"38"},{"":"","counter":"39","ep_num":"209","ep_title":"Metamorphosis","s":"2","e":"9","spokePos":"39"},{"":"","counter":"40","ep_num":"210","ep_title":"Journey to Babel","s":"2","e":"10","spokePos":"40"},{"":"","counter":"41","ep_num":"211","ep_title":"For the World Is Hollow and I Have Touched the Sky","s":"2","e":"11","spokePos":"41"},{"":"","counter":"42","ep_num":"212","ep_title":"The Deadly Years","s":"2","e":"12","spokePos":"42"},{"":"","counter":"43","ep_num":"213","ep_title":"Obsession","s":"2","e":"13","spokePos":"43"},{"":"","counter":"44","ep_num":"214","ep_title":"Wolf in the Fold","s":"2","e":"14","spokePos":"44"},{"":"","counter":"45","ep_num":"215","ep_title":"The Trouble with Tribbles","s":"2","e":"15","spokePos":"45"},{"":"","counter":"46","ep_num":"216","ep_title":"The Gamesters of Triskelion","s":"2","e":"16","spokePos":"46"},{"":"","counter":"47","ep_num":"217","ep_title":"A Piece of the Action","s":"2","e":"17","spokePos":"47"},{"":"","counter":"48","ep_num":"218","ep_title":"The Immunity Syndrome","s":"2","e":"18","spokePos":"48"},{"":"","counter":"49","ep_num":"219","ep_title":"A Private Little War","s":"2","e":"19","spokePos":"49"},{"":"","counter":"50","ep_num":"220","ep_title":"Return to Tomorrow","s":"2","e":"20","spokePos":"50"},{"":"","counter":"51","ep_num":"221","ep_title":"Patterns of Force","s":"2","e":"21","spokePos":"51"},{"":"","counter":"52","ep_num":"222","ep_title":"By Any Other Name","s":"2","e":"22","spokePos":"52"},{"":"","counter":"53","ep_num":"223","ep_title":"The Omega Glory","s":"2","e":"23","spokePos":"53"},{"":"","counter":"54","ep_num":"224","ep_title":"The Ultimate Computer","s":"2","e":"24","spokePos":"54"},{"":"","counter":"55","ep_num":"225","ep_title":"Bread and Circuses","s":"2","e":"25","spokePos":"55"},{"":"","counter":"56","ep_num":"226","ep_title":"Assignment: Earth","s":"2","e":"26","spokePos":"56"},{"":"","counter":"57","ep_num":"301","ep_title":"Spock's Brain","s":"3","e":"1","spokePos":"57"},{"":"","counter":"58","ep_num":"302","ep_title":"The Enterprise Incident","s":"3","e":"2","spokePos":"58"},{"":"","counter":"59","ep_num":"303","ep_title":"The Paradise Syndrome","s":"3","e":"3","spokePos":"59"},{"":"","counter":"60","ep_num":"304","ep_title":"And the Children Shall Lead","s":"3","e":"4","spokePos":"60"},{"":"","counter":"61","ep_num":"305","ep_title":"Is There in Truth No Beauty?","s":"3","e":"5","spokePos":"61"},{"":"","counter":"62","ep_num":"306","ep_title":"Spectre of the Gun","s":"3","e":"6","spokePos":"62"},{"":"","counter":"63","ep_num":"307","ep_title":"Day of the Dove","s":"3","e":"7","spokePos":"63"},{"":"","counter":"64","ep_num":"308","ep_title":"For the World Is Hollow and I Have Touched the Sky","s":"3","e":"8","spokePos":"64"},{"":"","counter":"65","ep_num":"309","ep_title":"The Tholian Web","s":"3","e":"9","spokePos":"65"},{"":"","counter":"66","ep_num":"310","ep_title":"Plato's Stepchildren","s":"3","e":"10","spokePos":"66"},{"":"","counter":"67","ep_num":"311","ep_title":"Wink of an Eye","s":"3","e":"11","spokePos":"67"},{"":"","counter":"68","ep_num":"312","ep_title":"The Empath","s":"3","e":"12","spokePos":"68"},{"":"","counter":"69","ep_num":"313","ep_title":"Elaan of Troyius","s":"3","e":"13","spokePos":"69"},{"":"","counter":"70","ep_num":"314","ep_title":"Whom Gods Destroy","s":"3","e":"14","spokePos":"70"},{"":"","counter":"71","ep_num":"315","ep_title":"Let That Be Your Last Battlefield","s":"3","e":"15","spokePos":"71"},{"":"","counter":"72","ep_num":"316","ep_title":"The Mark of Gideon","s":"3","e":"16","spokePos":"72"},{"":"","counter":"73","ep_num":"317","ep_title":"That Which Survives","s":"3","e":"17","spokePos":"73"},{"":"","counter":"74","ep_num":"318","ep_title":"The Lights of Zetar","s":"3","e":"18","spokePos":"74"},{"":"","counter":"75","ep_num":"319","ep_title":"Requiem for Methuselah","s":"3","e":"19","spokePos":"75"},{"":"","counter":"76","ep_num":"320","ep_title":"The Way to Eden","s":"3","e":"20","spokePos":"76"},{"":"","counter":"77","ep_num":"321","ep_title":"The Cloud Minders","s":"3","e":"21","spokePos":"77"},{"":"","counter":"78","ep_num":"322","ep_title":"The Savage Curtain","s":"3","e":"22","spokePos":"78"},{"":"","counter":"79","ep_num":"323","ep_title":"All Our Yesterdays","s":"3","e":"23","spokePos":"79"},{"":"","counter":"80","ep_num":"324","ep_title":"Turnabout Intruder","s":"3","e":"24","spokePos":"80"},{"":"","counter":"","ep_num":"","ep_title":"","s":"","e":"","spokePos":""},{"":"","counter":"","ep_num":"","ep_title":"","s":"","e":"","spokePos":""},{"":"","counter":"","ep_num":"","ep_title":"","s":"","e":"","spokePos":""}];
 
 
+var charShirts = ["kirk", "kirkSpock", "kirkSpockMcCoy", "evil_kirk", "spock", "mccoy", "uhura", "scotty", "chekov", "sulu", "rand", "carolyn_palamas", "charlene_masters", "desalle-g", "desalle-r", "harry_mudd", "helen_noel", "nurse_chapel", "mcgivers"];
+var charColors = ["gold", "green", "magenta", "tan", "turquoise", "turquoise", "red", "red", "gold", "gold", "red", "cornflowerblue", "cornflowerblue", "gold", "red", "orange", "cornflowerblue", "turquoise", "red"];
+
 // Data for centerHubCircle—Finishing Graphics
 
 var endCapRadius = 130;
@@ -44,7 +47,7 @@ spokeAndWheelChart.append("rect")
   .attr("y",0)
   .attr("width",w)
   .attr("height",h)
-  .style("fill", "white")
+  .attr("fill", "white")
   .style("stroke-width", 2)
   .style("stroke", "#ccc");
 
@@ -86,6 +89,26 @@ var spokes = episodeSpokes.selectAll("line")
     return centerPoint + Math.cos((i + 1) * ((2 * Math.PI)/numberOfSpokes)) * 250; })
   .attr("y2", function (d, i) {
     return centerPoint + Math.sin((i + 1) * ((2 * Math.PI)/numberOfSpokes)) * 250; });
+
+/*
+// code to try to read spokePos from json file
+
+var spokes = episodeSpokes.selectAll("line")
+var getSpokePosData = d3.spokes.json("./data/spokePos.json"), function(error, json) {data = json};
+
+getSpokePosData
+  .data(data)
+  .enter()
+  .append("line")
+  .attr("class", "spoke")
+  .attr("x1", centerPoint)
+  .attr("y1", centerPoint)
+  .attr("x2", function (d, i) {
+    return centerPoint + Math.cos((i + 1) * ((2 * Math.PI)/numberOfSpokes)) * 250; })
+  .attr("y2", function (d, i) {
+    return centerPoint + Math.sin((i + 1) * ((2 * Math.PI)/numberOfSpokes)) * 250; })
+});
+*/
 
 // Labels for spokes currently puts season and episode number up.
 // want episode name to be displayed somewhere
@@ -166,7 +189,7 @@ var centerCap = centerHubCircle.selectAll("circle.endCap")
   .attr("cx", centerPoint)
   .attr("cy", centerPoint)
   .attr("r", 65)
-  .style("fill", "white");
+  .attr("fill", "white");
 /*
 */
 
@@ -233,6 +256,7 @@ d3.selectAll(".buttons")
       d3.json(dataURL, function(error, json) {
 //        if (error) return console.warn(error);
         data = json;
+      var currentTrope = d3Button.property("value") + "Category"
       dotDetail.transition().duration(1000).style("opacity", 0)
       d3.selectAll(".buttons").classed("pressed", false)
       d3Button.classed("pressed", true)
@@ -240,61 +264,75 @@ d3.selectAll(".buttons")
       d3.selectAll('p.roundel').classed('is-shown', false);
       d3.selectAll('p.roundel.'+newData).classed('is-shown', true)
 
-      updateCircles(data)
+      updateCircles(data, currentTrope)
       });
 
 });
 
 
-// This function wraps around the d3 pattern (bind, add, update, remove)
-function updateCircles(newData) {
 
+
+// This function wraps around the d3 pattern (bind, add, update, remove)
+function updateCircles(newData, whichCategory) {
+
+
+  console.log(whichCategory)
+  var aliensCategory = ["culture", "energy_beings", "gone", "interference", "no_more", "non-humanoid", "power_absolute"];
+  var catchphraseCategory = ["spock", "fascinating", "eyebrow", "hes_dead", "interesting", "oneOff", "Emotional Vulcan", "technobabble", "vulcanian", "racism", "mind_meld", "im_a_doctor", "disobey_starfleet_orders", "vulcan_culture", "chekovs_gun", "russia", "butt_monkey"];
+
+  var current_category = [];
+  var colors10 = ["red", "orange", "yellow", "limegreen", "blue", "indigo", "purple", "tan", "white", "black"];
+
+//  var colorScale = d3.scale.ordinal().domain(whichCategory).range([0, colors10.length - 1]);
+//  var c10 = d3.scale.category10();
+//  var c10 = d3.scale.domain(aliensCategory);
+//  var colorTheDot = c10.domain(whichCategory)
+//  var colorDomain = d3.domain(whichCategory);
+//  var colorScale = d3.scale.ordinal(d3.range(0,whichCategory.length)).rangeBands([0,colors10])
+  var colorScale = d3.scale.ordinal().domain(current_category).range(colors10);
+  
   // bind data for dots
   var makeSomeDots = allDotsOnTheRing.selectAll("circle.coloredDot")
     .data(newData)
+//    .data(testData)
 
     // add new dots
     makeSomeDots
       .enter()
-//      .append("g")
-//      .attr("class", "oneDotOnTheRing")
       .append("circle")
-      .attr("class", function (d, i) { return "dotGroup-" + i + " coloredDot" }) 
-      .attr("dataColor", function (d, i) { return dataOrDefault(d,"color") })
-      .attr("dataRing", function (d, i) { return dataOrDefault(d,"ringAttr") }) 
-      .attr("dataDot", function (d, i) { return dataOrDefault(d,"dotAttr") }) 
+      .attr("class", function (d, i) {return d.tags + " dotGroup-" + i + " coloredDot" }) 
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
-      .transition().delay(function (d, i) {
-        return i * delayVarShort; })
+      .transition().delay(function (d, i) {return i * delayVarShort; })
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
-      .attr("r", function (d) { return dotSize; })
-      .style("fill", colorTheDots)
+      .attr("r", dotSize)
+      .attr("fill", colorScale(function (d) {return d.tropes}))
       .style("stroke", function (d) {
-        if (ringAttr === "1") { return "black"}
-          else { return "white"}})
+        if (d.ringAttr === "1") { return "black"} else { return "white"}})
       .style("stroke-width", function (d) {
-        if (ringAttr === "0") { return 0 }
-          else { return 1}
-      })
-      ;
+        if (d.ringAttr === "0") { return 0 } else { return .75}
+      });
 
     // update existing dots
     makeSomeDots
       .transition().delay(function (d, i) {return i * delayVarShort; })
+      .attr("class", function (d, i) { return d.tags + " dotGroup-" + i + " coloredDot" }) 
       .attr("cy", calcSinForDots)
       .attr("cx", calcCosForDots)
-      .attr("r", function (d) { return dotSize; })
-      .style("fill", colorTheDots)
-      .style("stroke-width", ringAttr)
-      ;
+      .attr("r", dotSize)
+      .attr("fill", colorScale(function (d) {return d.tropes}))
+      .style("stroke", function (d) {
+        if (d.ringAttr === "1") { return "black"} else { return "white"}})
+      .style("stroke-width", function (d) {
+        if (d.ringAttr === "0") { return 0 } else { return .75}
+      });
 
     // remove old, used dots
     makeSomeDots.exit()
       .transition().delay(function (d, i) {return i * delayVarShort; })
-     .attr("cx", calcCosForDotsOnRemove)
+      .attr("cx", calcCosForDotsOnRemove)
       .attr("cy", calcSinForDotsOnRemove)
       .attr("r", 0)
       .remove();
@@ -304,17 +342,13 @@ function updateCircles(newData) {
 
   var makeSomeDotsAssist = allDotsOnTheRing.selectAll("circle.smallDot")
     .data(newData)
+//    .data(testData)
 
     // add mini center dot for additional attribute
     makeSomeDotsAssist
       .enter()
-//      .append("g")
       .append("circle")
- //     .attr("class", "smallCenterDot")
-      .attr("class", function (d, i) { return "dotGroup-" + i + " smallDot" }) 
-      .attr("dataColor", function (d, i) { return dataOrDefault(d,"color","gray") })
-      .attr("dataRing", function (d, i) { return dataOrDefault(d,"ringAttr") }) 
-      .attr("dataDot", function (d, i) { return dataOrDefault(d,"dotAttr") }) 
+      .attr("class", function (d, i) { return d.color + " dotGroup-" + i + " smallDot"}) 
       .attr("cx", centerPoint)
       .attr("cy", centerPoint)
       .attr("r", 0)
@@ -322,17 +356,18 @@ function updateCircles(newData) {
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return d.dotAttr == 0 ? 0 : ((dotSize / 8) * 3); })
-      .style("fill", function (d) { return d.dotAttr == 2 ? "white" : "black";});
+      .attr("fill", function (d) { return d.dotAttr == 2 ? "white" : "black";});
 
     // update existing mini dots for assist
     makeSomeDotsAssist
       .transition().delay(function (d, i) {return i * delayVarShort; })
 //      .attr("cx", centerPoint)
 //      .attr("cy", centerPoint)/
+      .attr("class", function (d, i) { return d.color + " dotGroup-" + i + " smallDot"}) 
       .attr("cx", calcCosForDots)
       .attr("cy", calcSinForDots)
       .attr("r", function (d) { return d.dotAttr == 0 ? 0 : ((dotSize / 8) * 3); })
-      .style("fill", function (d) { return d.dotAttr == 2 ? "white" : "black";});
+      .attr("fill", function (d) { return d.dotAttr == 2 ? "white" : "black";});
     ;
 
     // remove old mini dots for assist
@@ -352,48 +387,21 @@ function updateCircles(newData) {
 
     makeSomeDots
       .on("mouseover", function (d, i) {
-        var current_color = d.color;
-        var current_ringAttr = d.ringAttr;
-        var current_dotAttr = d.dotAttr;
+        var tagHoveredOver = d.trope;
 
         d3.selectAll(".coloredDot")
-          .attr("opacity", function (d, i) {
-            if (d.color === current_color) { 
-              if (d.ringAttr === current_ringAttr) {
-                if (d.dotAttr === current_dotAttr) {
-                  return 1
-                } else {
-                  return .1
-                }
-              } else {
-                return .1
-              }
-            } else { 
-              return .1}
-          })
-        d3.selectAll(".smallDot")
-          .attr("opacity", function (d, i) {
-            if (d.color === current_color) { 
-              if (d.ringAttr === current_ringAttr) {
-                if (d.dotAttr === current_dotAttr) {
-                  return 1
-                } else {
-                  return .1
-                }
-              } else {
-                return .1
-              }
-            } else { 
-              return .1}
-          })
-        }) ;
+        .style("opacity", function (d) {
+          if (d.trope == tagHoveredOver) {return 1}
+            else {return .2}
+        })
+      });
 
     makeSomeDots
       .on("mouseout", function (d) {
         d3.selectAll(".coloredDot")
-          .attr("opacity", 1)
+          .style("opacity", 1)
         d3.selectAll(".smallDot")
-          .attr("opacity", 1)
+          .style("opacity", 1)
       });
         
 
@@ -402,25 +410,17 @@ function updateCircles(newData) {
       .data(newData)
       .on("click", function(d) {
         dotDetail.style("opacity", 0).transition().duration(1000).style("opacity", .9)
-        dotDetail.html("S"+d.s+"E"+d.e+" ("+d.ep_title+") [" + d.trope + "] " + d.trope_detail)
+        dotDetail.html("S"+d.s+"E"+d.e + d.ep_title + " [" + d.trope + "] " + d.trope_detail)
     })
 
     var makeSomeDots = allDotsOnTheRing.selectAll("circle.smallDot")
       .data(newData)
       .on("click", function(d) {
         dotDetail.style("opacity", 0).transition().duration(1000).style("opacity", .9)
-        dotDetail.html("S"+d.s+"E"+d.e+" ("+d.ep_title+") [" + d.trope + "] " + d.trope_detail)
+        dotDetail.html("S"+d.s+"E"+d.e + d.ep_title + " [" + d.trope + "] " + d.trope_detail)
     })
 };
 
-// Independent Funtions
-
-function turnDotsTranslucent (current_color, whichCircle) {
-//    console.log(current_color, whichCircle)
-    d3.selectAll(whichCircle).style("opacity", function (d) {
-        if(d.color === current_color) {return "1"}
-        else {return ".1"}
-})};
 
 // take nulls and return "something"
 function dataOrDefault (data, property, varDefault) {
@@ -436,15 +436,7 @@ function dataOrDefault (data, property, varDefault) {
   return aValue
 };
 
-// tell graph what color each dot needs to be
-function colorTheDots(d) {
-  var defaultColor = "#aaa"
 
-  if( d.color == "") {
-    return "#aaa";
-  } else {
-    return d.color; }
-  };  
 
 // Make stroke visible to indicate an special parameter.
 // Should be changed from d.ringAttr to whatever the data set uses.

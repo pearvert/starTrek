@@ -1,0 +1,42 @@
+	kirk {
+	color: purple;
+	stroke: black;
+	stroke-width: 1px;
+	class: "kirk";
+}
+.sulu {
+	color: gold;
+	stroke: none;
+	stroke-width: 0px;
+	class: "spock";
+}
+.chekov {
+	color: gold;
+	stroke: none;
+	stroke-width: 0px;
+}
+.spock {
+	color: cornflowerblue;
+	stroke: black;
+	stroke-width: 1px;	
+}
+.mccoy {
+	color: cornflowerblue;
+	stroke: none;
+	stroke-width: 0px;	
+}
+.nurse_chapel {
+	color: cornflowerblue;
+	stroke: none;
+	stroke-width: 0px;	
+}
+.uhura {
+	color: red;
+	stroke: black;
+	stroke-width: 1px;	
+}
+.scotty {
+	color: red;
+	stroke: none;
+	stroke-width: 0px;	
+}
