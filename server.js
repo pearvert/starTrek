@@ -11,27 +11,31 @@ app.get('/express', function (req, res) {
 
 // Case sensitive names of the sheets expected to be in the source xlsx file
 var sheets = [
-  "kirk",
-  "spock",
-  "mccoy",
-  "uhura",
-  "other",
   "aliens",
+  "catchphrase",
+  "death",
+  "exposition",
   "fight",
-  "love",
+  "flipComm",
+  "hugAndKiss",
+  "landingParty"
+
+/*  "love",
+  "mccoy",
+  "medicine",
+  "dataPadd",
   "phlebotinum",
-  "racism",
   "setPiece",
   "sexism",
-  "commLink",
-  "dataPadd",
-  "landingParty",
-  "rayGun",
-  "redshirt",
-  "scotty",
+  "space",
+  "spock",
   "stShuffle",
+  "telephone",
+  "transporter",
   "tricorder",
   "warp"
+  "rayGun"
+*/  
 ];
 
 // Prepare the XLSX -> JSON transformer and register routes in express to the JSON api

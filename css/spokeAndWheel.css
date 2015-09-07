@@ -54,7 +54,7 @@ h2 {
 .ring {
   stroke: none;
   stroke-width: 0;
-  fill: #776;
+  fill: black;
 }
 .death {
   fill: #000;
